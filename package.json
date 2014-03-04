@@ -72,7 +72,7 @@
     "mocha-as-promised": "~2.0.0"
   },
   "scripts": {
-    "test": "make test",
+    "test": "echo hi && make test",
     "start": "bin/strider",
     "blanket": {
       "pattern": "lib",
