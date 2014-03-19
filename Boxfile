@@ -17,7 +17,7 @@ dev.paperg.com:
   www:
     <<: *www
     env:
-      DB_URI: mongodb://strider:Spr1nt@oceanic.mongohq.com:10064/strider-dong-136
+      DB_URI: mongodb://strider:Spr1nt@oceanic.mongohq.com:10041/dong-strider-136
       #
       # This config section must match your github app key and the FQDN of your box.
       # You can ignore this config if you don't care to receive webhook notifications.
@@ -26,7 +26,7 @@ dev.paperg.com:
       # The callback URL is: /auth/github/callback.
       # So for the example below authorization callback URL is
       #   http://www.my-host-name.strider.aws.paperg.com:5000/auth/github/callback
-      SERVER_NAME: http://www.domint-work.strider.dev.paperg.com:5000
+      SERVER_NAME: http://www.dobuntu.strider.dev.paperg.com:5000
       GITHUB_APP_ID: e2c1cb2d9d6f0ca7d8b2
       GITHUB_APP_SECRET: ca45f6577f58369232f84ab8ce6398d9ea091ad3
       TASK_QUEUE_URL: https://sqs.us-east-1.amazonaws.com/873922865494/dong-strider
