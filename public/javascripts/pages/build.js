@@ -378,7 +378,7 @@ app.controller('JobCtrl', ['$scope', '$route', '$location', 'jobs', function ($s
       // populate branch list
       var branches = jobs.getCache(project).list.map(function (elem)
                                                      {
-                                                       return elem.commit.branch;
+                                                       return elem.commit === null ? null : elem.commit.branch;
                                                      });
       $scope.branches = branches.filter(function (elem, pos, self)
                                         {
