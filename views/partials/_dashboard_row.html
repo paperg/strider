@@ -54,7 +54,7 @@
 <td class="committer">
   <div ng-show="job.triggered_by_commit" ng-switch="job.committer.url">
     <img ng-switch-when="null" ng-src="[[ job.committer.image ]]"/>
-    <a ng-switch-default href="http://www.[[ job.commit.branch ]].[[ job.committer.username ]].placelocal.aws.paperg.com">
+    <a ng-switch-default href="http://www.[[ job.commit.branch ]].[[ job.committer.username ]].[[ short_project_name ]].aws.paperg.com">
       <img ng-src="[[ job.committer.image ]]"/>
     </a>
   </div>
