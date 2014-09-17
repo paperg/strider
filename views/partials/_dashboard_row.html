@@ -50,7 +50,8 @@
   </div>
 </td>
 <!-- TODO: this uses the committer class for now to test functionality. Looks come later -->
-<td class="committer" ng-if="job.commit.branch !== 'master' && job.commit.branch !== 'stable'">
+<!-- Only show this PL aws link if we are in fact on placelocal, and not the master or stable branch -->
+<td class="committer" ng-show="short_project_name === 'placelocal' && job.commit.branch !== 'master' && job.commit.branch !== 'stable'">
   <div ng-show="job.triggered_by_commit" ng-switch="job.committer.url">
     <img ng-switch-when="null" ng-src="[[ job.committer.image ]]"/>
     <a ng-switch-default href="http://www.[[ job.commit.branch ]].[[ job.committer.username ]].[[ short_project_name ]].aws.paperg.com">
