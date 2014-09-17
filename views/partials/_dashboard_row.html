@@ -49,7 +49,6 @@
     </a>
   </div>
 </td>
-
 <!-- TODO: this uses the committer class for now to test functionality. Looks come later -->
 <td class="committer" ng-if="job.commit.branch !== 'master' && job.commit.branch !== 'stable'">
   <div ng-show="job.triggered_by_commit" ng-switch="job.committer.url">
@@ -59,7 +58,6 @@
     </a>
   </div>
 </td>
-
 <td class="commit-url">
   <a ng-show="job.triggered_by_commit"
      href="[[ job.commit.url ]]">
