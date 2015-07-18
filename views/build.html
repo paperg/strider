@@ -7,6 +7,8 @@
 <div class="app ng-cloak" ng-app="JobStatus">
   <script>
     var repo = {{ repo_config | json_encode() | raw }};
+    // Project name ex: paperg/placelocal -- short name ex: placelocal
+    var short_project_name = job.project_name.split('/')[1];
   </script>
   <base href="/"></base>
   <div id="build-page" class="main" ng-view></div>
