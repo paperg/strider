@@ -290,11 +290,17 @@ app.controller('JobCtrl', ['$scope', '$route', '$location', 'jobs', function ($s
       if (err) {
         return showError('Failed to fetch job');
       }
-      
+
       // populate branch list
-      var branches = jobs.getCache(project).list.map(function(elem) { return elem.commit.branch; }); 
-      $scope.branches = branches.filter(function(elem, pos, self) { return self.indexOf(elem) == pos; });
-      
+      var branches = jobs.getCache(project).list.map(function(elem) {
+        return elem.commit !== undefined ? elem.commit.branch : null;
+      });
+
+      if (branches)
+      {
+        $scope.branches = branches.filter(function(elem, pos, self) { return self.indexOf(elem) == pos; });
+      }
+
       if (jobid && job.id !== jobid) return;
       jobid = job.id;
       $scope.job = job;
